@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+//color variables
+$white-bg-color:#fff;
+$light-accent-bg-color:#eff1f4;
+
+body {
+    background-color: $light-accent-bg-color !important;
+}
+.centered {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+input, button {
+    border-radius: 2px !important;
+}
+//LOGIN FORM STYLE
+.login {
+    &-brand {
+        padding: 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+    &-form {
+        background-color: $white-bg-color;
+        padding: 1rem;
+        border-radius: 2px;
+        box-shadow: rgb(0 0 0 / 6%) 0px 4px 4px, rgb(0 0 0 / 8%) 0px 8px 18px;
+        min-width: 400px;
+        .form-group {
+            margin-bottom: 1rem;
+            .form-options {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
