@@ -1,15 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('assets/styles/sidenav.scss');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;500;700&display=swap');
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
 }
+strong {
+    font-weight: 700 !important;
+}
+button {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    i {
+        margin-right: 0.44rem;
+    }
+}
 //color variables
 $white-bg-color:#fff;
 $light-accent-bg-color:#eff1f4;
-
+$font-primary: Sora;
+$nav-height: 60px; //the standard height of every navbar
 body {
     background-color: $light-accent-bg-color !important;
+    font-family: $font-primary !important;
 }
 .centered {
     display:flex;
@@ -42,7 +57,115 @@ input, button {
         }
     }
 }
-//SIDENAV STYLE
-#sidenav {
-    background-color: $white-bg-color;
+.sidenav {
+    &-brand {
+        display: flex;
+        justify-content: center;
+        height: $nav-height;
+        &_logo {
+            //color: red;
+            font-size: 1.7rem;
+            display: flex;
+            align-items: center;
+        }
+    }
+    &-links {
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+        &-outer {
+            cursor: pointer;
+            &-buttons {
+                margin-top: 2rem;
+                display: flex;
+                flex-direction: column;
+                button {
+                    margin: 5px 0px;
+                }
+            }
+        }
+        &-inner {
+            border-radius: 4px;
+            transition: 0.2s ease;
+            &:hover {
+                background-color: #e4efff;
+                transform: translateX(10px);
+                transition: 0.2s ease;
+            }
+            &.active {
+                background-color: #e4efff;
+            }
+            padding: 0.44rem 0.9rem;
+            display: flex;
+            align-items: center;
+            &_icon {
+                color: #a2b0b4;
+                margin-right: 1rem;
+                i {
+                    font-size: 1.525rem;
+                }
+            }
+        }
+    }
+}
+.status-bar {
+    padding: 0rem 14.4px;
+    height: $nav-height;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.component-render {
+    padding: 0.44rem 14.4px;
+}
+.data-block {
+    margin-bottom: 1rem;
+    height: 100%;
+    &-inner {
+        //padding-right: 1rem;
+        height: 100%;
+        border-radius: 4px;
+        &_inset {
+            height: 100%;
+            background-color: white;
+            padding: 1rem;
+            &-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1rem;
+            }
+            &-bottom {
+                margin-top: 1rem;
+                display: flex;
+                justify-content: end;
+            }
+        }
+    }
+}
+
+//giant button
+.giant-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_icon {
+        font-size: 3rem;
+    }
+}
+
+.dropdown-item {
+    justify-content: start !important;
+}
+#renderContent {
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.prestamo-block {
+    padding: 1rem;
+    width: 100%;
+    table {
+        width: 100%;
+    }
 }

@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-lg-12 mb-3">
+        <div class="data-block">
+            <div class="data-block-inner">
+                <div class="data-block-inner_inset">
+                    <div class="data-block-inner_inset-top">
+                        <div class="data-block-inner_inset-top_left">
+                            <h5 class="mb-0">Solicitudes</h5>
+                        </div>
+                        <div class="data-block-inner_inset-top_right">
+                            <button class="btn btn-primary">Nueva Solicitud</button>
+                        </div>
+                    </div>
+                    <div class="data-block-inner_inset-top">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                              Ver todas
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                              <li><button class="dropdown-item" type="button">Nuevas</button></li>
+                              <li><button class="dropdown-item" type="button">Pendientes de desembolso</button></li>
+                              <li><button class="dropdown-item" type="button">Rechazadas</button></li>
+                            </ul>
+                          </div>
+                    </div>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Fecha Solicitud</th>
+                                <th>Nombre</th>
+                                <th>Monto</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let solicitud of solicitudes">
+                                <td>{{solicitud.numero}}</td>
+                                <td>{{solicitud.fecha}}</td>
+                                <td>{{solicitud.nombre}}</td>
+                                <td>{{solicitud.monto}}</td>
+                                <td>{{solicitud.estado}}</td>
+                                <td>Aprobar</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

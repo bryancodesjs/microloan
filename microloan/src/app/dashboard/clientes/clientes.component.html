@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col-lg-12 mb-3">
+        <div class="data-block">
+            <div class="data-block-inner">
+                <div class="data-block-inner_inset">
+                    <div class="data-block-inner_inset-top">
+                        <div class="data-block-inner_inset-top_left">
+                            <h5 class="mb-0">Clientes</h5>
+                        </div>
+                        <!-- <div class="data-block-inner_inset-top_right">
+                            <button class="btn btn-transparent">Generar Reporte</button>
+                        </div> -->
+                    </div>
+                    <div class="data-block-inner_inset-top">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Buscar Cliente" aria-label="Buscar Cliente" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+                        </div>
+                    </div>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Fecha Ingreso</th>
+                                <th>Historial de Prestamos</th>
+                                <th>Prestamos Activos</th>
+                                <th>Atraso Promedio (días)</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let cliente of clientes">
+                                <td>{{cliente.nombre}}</td>
+                                <td>{{cliente.ingreso}}</td>
+                                <td>{{cliente.prestamos}}</td>
+                                <td>{{cliente.prestamosActivos}}</td>
+                                <td>{{cliente.atrasoPromedio}}</td>
+                                <td>Ver Detalles</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <nav aria-label="Page navigation example" class="mt-5 d-flex justify-content-center">
+                        <ul class="pagination">
+                          <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                        </ul>
+                      </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

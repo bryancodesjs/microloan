@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col-lg-12 mb-3">
+        <div class="data-block">
+            <div class="data-block-inner">
+                <div class="data-block-inner_inset">
+                    <div class="data-block-inner_inset-top">
+                        <div class="data-block-inner_inset-top_left">
+                            <h5 class="mb-0">Recibir Pago</h5>
+                        </div>
+                        <!-- <div class="data-block-inner_inset-top_right">
+                            <button class="btn btn-transparent">Generar Reporte</button>
+                        </div> -->
+                    </div>
+                    <div class="data-block-inner_inset-top">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="# de prestamo" aria-label="# de prestamo" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+                        </div>
+                    </div>
+                    <h5>1 Prestamo encontrado</h5>
+                    <div class="prestamo-block border">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th># de Prestamo</th>
+                                    <th>Cliente</th>
+                                    <th>Monto de Prestamo</th>
+                                    <th>Tasa</th>
+                                    <th>Total Pagado</th>
+                                    <th>Atraso</th>
+                                    <th>Monto Cuotas</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{{prestamo.numero}}</td>
+                                    <td>{{prestamo.cliente}}</td>
+                                    <td>{{prestamo.monto}}</td>
+                                    <td>{{prestamo.tasa}}%</td>
+                                    <td class="text-success">{{prestamo.pagado}}</td>
+                                    <td class="text-danger">{{prestamo.atraso}}</td>
+                                    <td>{{prestamo.montoCuotas}}</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-success">Recibir Pago</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

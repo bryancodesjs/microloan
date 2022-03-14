@@ -1,8 +1,72 @@
 <div class="container-fluid h-100">
     <div class="row h-100">
-        <div id="sidenav" class="col-lg-2">
-            sidenav
+        <div id="sidenav" class="col-lg-3 col-md-3">
+            <div class="sidenav">
+                <div class="sidenav-brand">
+                    <strong class="sidenav-brand_logo">
+                        Prestamos
+                    </strong>
+                </div>
+                <ul class="sidenav-links">
+                    <li class="sidenav-links-outer">
+                        <div class="sidenav-links-inner activehhhh">
+                            <span class="sidenav-links-inner_icon"><i class="ri-dashboard-fill"></i></span>
+                            <span class="sidenav-links-inner_text">Panel Principal</span>
+                        </div>
+                    </li>
+                    <li class="sidenav-links-outer">
+                        <div class="sidenav-links-inner">
+                            <span class="sidenav-links-inner_icon"><i class="ri-money-dollar-circle-fill"></i></span>
+                            <span class="sidenav-links-inner_text">Prestamos</span>
+                        </div>
+                    </li>
+                    <li class="sidenav-links-outer">
+                        <div class="sidenav-links-inner">
+                            <span class="sidenav-links-inner_icon"><i class="ri-file-list-3-line"></i></span>
+                            <span class="sidenav-links-inner_text">Solicitudes</span>
+                        </div>
+                    </li>
+                    <li class="sidenav-links-outer">
+                        <div class="sidenav-links-inner">
+                            <span class="sidenav-links-inner_icon"><i class="ri-user-6-fill"></i></span>
+                            <span class="sidenav-links-inner_text">Clientes</span>
+                        </div>
+                    </li>
+                    <li class="sidenav-links-outer">
+                        <div class="sidenav-links-inner">
+                            <span class="sidenav-links-inner_icon"><i class="ri-settings-3-fill"></i></span>
+                            <span class="sidenav-links-inner_text">Configuracion</span>
+                        </div>
+                    </li>
+                    <li class="sidenav-links-outer">
+                        <div class="sidenav-links-outer-buttons">
+                            <button class="btn btn-primary">
+                                Nueva Solicitud
+                            </button>
+                            <button class="btn btn-success">
+                                Recibir Pago
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="col-lg-10">render components here</div>
+        <div id="renderContent" class="col-lg-9 col-md-9">
+            <div class="status-bar">
+                <div class="status-bar_title">
+                    <h4 class="mb-0">Principal</h4>
+                </div>
+                <div class="status-bar_logoutbtn">
+                    <button class="btn btn-transparent"><i class="ri-logout-box-r-line"></i> Cerrar Sesion</button>
+                </div>
+            </div>
+            <div class="component-render">
+                <app-principal></app-principal>
+                <app-solicitudes></app-solicitudes>
+                <app-clientes></app-clientes>
+                <app-configuracion></app-configuracion>
+                <app-recibirpago></app-recibirpago>
+            </div>
+        </div>
     </div>
 </div>
